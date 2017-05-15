@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.hirayclay.bubbleview.MainActivity">
+
+
+    <View
+        android:background="#f25555"
+        android:onClick="onClick"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+   <!-- <com.example.hirayclay.bubbleview.Bubble
+        app:left_top_corner="9dp"
+        app:left_bottom_corner="9dp"
+        app:right_top_corner="9dp"
+        app:right_bottom_corner="9dp"
+        app:arrow_width="20dp"
+        app:arrow_height="20dp"
+        app:arrow_direction="top"
+        app:arrow_start_position="10dp"
+        app:extra_corner_padding="true"
+        app:extra_corner_ratio="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:includeFontPadding="false"
+                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:includeFontPadding="false"
+                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:includeFontPadding="false"
+                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </com.example.hirayclay.bubbleview.Bubble>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="hhhhh"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>
