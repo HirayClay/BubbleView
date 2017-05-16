@@ -47,7 +47,7 @@
     </LinearLayout>
     </com.example.hirayclay.bubbleview.Bubble>
 ```
-![](https://github.com/HirayClay/BubbleView/raw/master/app/static/illustration.png "poor picture quality")<br>
+![](https://github.com/HirayClay/BubbleView/raw/master/app/static/small_illustration.png "poor picture quality")<br>
 
 
 ## Attention!
