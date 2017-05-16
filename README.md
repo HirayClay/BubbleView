@@ -8,4 +8,4 @@
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art3.png"></img>
 
 ## Usage
-![](https://github.com/HirayClay/CircleIndicator/raw/master/app/static/illustration.png "poor picture quality")<br>
+![](https://github.com/HirayClay/BubbleView/raw/master/app/static/illustration.png "poor picture quality")<br>
