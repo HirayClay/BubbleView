@@ -52,10 +52,11 @@ public class PopHelper implements View.OnClickListener {
         layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
         layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
         layoutParams.format = PixelFormat.TRANSPARENT;
+        layoutParams.flags = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         layoutParams.gravity = Gravity.START | Gravity.TOP;
-        layoutParams.x = 0;
+        layoutParams.x = -statusBarHeight;
         layoutParams.y = 0;
-        parent.setBackgroundColor(Color.argb(100, 256, 256, 256));
+//        parent.setBackgroundColor(Color.argb(100, 256, 256, 256));
         parent.setId(parentId);
         bubble.setId(bubbleId);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
