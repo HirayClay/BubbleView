@@ -25,6 +25,9 @@ public class ArrowDrawable extends Drawable {
     private float mArrowAnglePostion;//arrow 尖距离arrow其实位置的距离
     private float mArrowWidth;//arrow宽度
     private float mArrowHeight;//arrow 高度
+
+    private int mColor;
+
     //圆角半径
     private float mLtCorner;
     private float mRtCorner;
@@ -35,11 +38,12 @@ public class ArrowDrawable extends Drawable {
     Path mPath;
 
 
-    public ArrowDrawable(ArrowAlign mArrowAlign, boolean mExtraCornerPadding, float mArrowWidth, float mArrowHeight, float mArrowPosition,
+    public ArrowDrawable(ArrowAlign mArrowAlign, int color,boolean mExtraCornerPadding, float mArrowWidth, float mArrowHeight, float mArrowPosition,
                          float mArrowAnglePosition,
                          float ltCorner, float rtCorner, float lbCorner, float rbCorner,
                          int left, int top, int right, int bottom) {
         this.mArrowAlign = mArrowAlign;
+        this.mColor = color;
         this.mExtraCornerPadding = mExtraCornerPadding;
         this.mArrowPosition = mArrowPosition;
         this.mArrowHeight = mArrowHeight;
@@ -58,7 +62,7 @@ public class ArrowDrawable extends Drawable {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        mPaint.setColor(Color.parseColor("#ff00ff"));
+        mPaint.setColor(mColor);
         mPaint.setStrokeWidth(2);
 
         //left to right matrix

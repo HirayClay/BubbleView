@@ -4,60 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="left"
     android:orientation="vertical"
     tools:context="com.example.hirayclay.bubbleview.MainActivity">
 
 
-    <View
-        android:background="#f25555"
-        android:onClick="onClick"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
-
-   <!-- <com.example.hirayclay.bubbleview.Bubble
-        app:left_top_corner="9dp"
-        app:left_bottom_corner="9dp"
-        app:right_top_corner="9dp"
-        app:right_bottom_corner="9dp"
-        app:arrow_width="20dp"
-        app:arrow_height="20dp"
-        app:arrow_direction="top"
-        app:arrow_start_position="10dp"
-        app:extra_corner_padding="true"
-        app:extra_corner_ratio="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:includeFontPadding="false"
-                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:includeFontPadding="false"
-                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:includeFontPadding="false"
-                android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-    </com.example.hirayclay.bubbleview.Bubble>-->
-
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
-            android:text="hhhhh"
-            android:layout_marginLeft="140dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:background="#f25555"
+            android:onClick="onClick"
+            android:text="showAtPoint:----->"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:onClick="onClick"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:background="#f25555" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f25555"
+            android:onClick="onClick"
+            android:text="showAtView:----->"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:onClick="showAtView"
+            android:text="AnchorView"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+    <include layout="@layout/bubble_arrow_left_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <include layout="@layout/bubble_arrow_right_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <include layout="@layout/bubble_arrow_top_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <include layout="@layout/bubble_arrow_bottom_layout" />
+
+
 </LinearLayout>

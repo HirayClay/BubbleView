@@ -3,6 +3,7 @@ package com.example.hirayclay.bubbleview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.widget.FrameLayout;
 
 /**
  * Created by CJJ on 2017/5/12 mm
+ * 继承FrameLayout是比较好的选择，只用关心直接子节点的大小即可，设置额外的Padding为ArrowDrawable留出绘制
+ * 空间
  */
 
 public class Bubble extends FrameLayout {
@@ -23,6 +26,9 @@ public class Bubble extends FrameLayout {
     private float mArrowAnglePosition;//arrow 尖距离arrow其实位置的距离
     private float mArrowWidth;//arrow宽度
     private float mArrowHeight;//arrow 高度
+
+    private int mColor;
+
     //圆角半径
     private float mLtCorner;
     private float mRtCorner;
@@ -41,6 +47,7 @@ public class Bubble extends FrameLayout {
 
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.Bubble);
         mIsFloating = array.getBoolean(R.styleable.Bubble_is_floating, false);
+        mColor = array.getColor(R.styleable.Bubble_bubble_color, Color.GREEN);
         mLtCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_top_corner, 0);
         mRtCorner = array.getDimensionPixelSize(R.styleable.Bubble_right_top_corner, 0);
         mLbCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_bottom_corner, 0);
@@ -100,8 +107,8 @@ public class Bubble extends FrameLayout {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        if (mArrowDrawable == null)
-            mArrowDrawable = new ArrowDrawable(mArrowAlign, mCornerPadding, mArrowWidth, mArrowHeight,
+        if (mArrowDrawable == null || changed)
+            mArrowDrawable = new ArrowDrawable(mArrowAlign, mColor, mCornerPadding, mArrowWidth, mArrowHeight,
                     mArrowPosition, mArrowAnglePosition, mLtCorner, mRtCorner, mLbCorner, mRbCorner,
                     0, 0, getWidth(), getHeight());
     }
@@ -115,6 +122,36 @@ public class Bubble extends FrameLayout {
 
     }
 
+    public void setColor(int mColor) {
+        this.mColor = mColor;
+        requestLayout();
+    }
+
+    public void setArrowAlign(ArrowAlign mArrowAlign) {
+        this.mArrowAlign = mArrowAlign;
+        requestLayout();
+
+    }
+
+    public void setArrowHeight(float mArrowHeight) {
+        this.mArrowHeight = mArrowHeight;
+        requestLayout();
+    }
+
+    public void setArrowPosition(float mArrowPosition) {
+        this.mArrowPosition = mArrowPosition;
+        requestLayout();
+    }
+
+    public void setArrowWidth(float mArrowWidth) {
+        this.mArrowWidth = mArrowWidth;
+        requestLayout();
+    }
+
+    public void setArrowAnglePosition(float mArrowAnglePosition) {
+        this.mArrowAnglePosition = mArrowAnglePosition;
+        requestLayout();
+    }
 
     public ArrowAlign getArrowAlign() {
         return mArrowAlign;
