@@ -8,7 +8,7 @@
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art3.png"></img>
 
 ## Usage
-<pre><code>
+```xml
 <com.example.hirayclay.bubbleview.Bubble
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
@@ -45,7 +45,8 @@
             android:includeFontPadding="false"
             android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
     </LinearLayout>
-    </com.example.hirayclay.bubbleview.Bubble></code></pre>
+    </com.example.hirayclay.bubbleview.Bubble>
+```
 ![](https://github.com/HirayClay/BubbleView/raw/master/app/static/illustration.png "poor picture quality")<br>
 
 
