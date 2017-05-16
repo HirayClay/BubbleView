@@ -9,3 +9,7 @@
 
 ## Usage
 ![](https://github.com/HirayClay/BubbleView/raw/master/app/static/illustration.png "poor picture quality")<br>
+
+
+##Attention!
+由于内部实现偷了懒，只绘制了箭头在左边和在右边两种情况下的路径，朝下和朝右的是在前者路径的基础上施加Matrix变换得来的，所以如果是想朝右时，并且不需要右上角的圆角，这时候就不能设置right_top_corner圆角为零，而是设置left_top_corner圆角为零
