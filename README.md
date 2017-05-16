@@ -6,3 +6,5 @@
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art1.png"></img>
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art2.png"></img>
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art3.png"></img>
+
+## Usage
