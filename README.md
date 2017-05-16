@@ -8,6 +8,43 @@
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art3.png"></img>
 
 ## Usage
+<com.example.hirayclay.bubbleview.Bubble
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:arrow_direction="top"
+    app:arrow_height="20dp"
+    app:arrow_start_position="20dp"
+    app:arrow_angle_position="10dp"
+    app:arrow_width="20dp"
+    app:extra_corner_padding="true"
+    app:extra_corner_ratio="1"
+    app:left_bottom_corner="9dp"
+    app:bubble_color="@color/colorBrown"
+    app:left_top_corner="0dp"
+    app:right_bottom_corner="9dp"
+    app:right_top_corner="9dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+    </LinearLayout>
+</com.example.hirayclay.bubbleview.Bubble>
 ![](https://github.com/HirayClay/BubbleView/raw/master/app/static/illustration.png "poor picture quality")<br>
 
 
