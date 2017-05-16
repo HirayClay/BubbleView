@@ -45,7 +45,7 @@
             android:includeFontPadding="false"
             android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
     </LinearLayout>
-    </com.example.hirayclay.bubbleview.Bubble>
+</com.example.hirayclay.bubbleview.Bubble>
 ```
 ![](https://github.com/HirayClay/BubbleView/raw/master/app/static/small_illustration.png "poor picture quality")<br>
 
