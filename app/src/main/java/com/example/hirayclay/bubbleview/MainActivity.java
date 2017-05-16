@@ -1,10 +1,8 @@
 package com.example.hirayclay.bubbleview;
 
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -17,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     public void onClick(View view) {
         PopHelper popHelper = new PopHelper(this);
         LayoutInflater inflater = LayoutInflater.from(this);

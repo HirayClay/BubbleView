@@ -108,7 +108,7 @@ public class Bubble extends FrameLayout {
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         if (mArrowDrawable == null || changed)
-            mArrowDrawable = new ArrowDrawable(mArrowAlign, mColor, mCornerPadding, mArrowWidth, mArrowHeight,
+            mArrowDrawable = new ArrowDrawable(mArrowAlign, mColor, mArrowWidth, mArrowHeight,
                     mArrowPosition, mArrowAnglePosition, mLtCorner, mRtCorner, mLbCorner, mRbCorner,
                     0, 0, getWidth(), getHeight());
     }

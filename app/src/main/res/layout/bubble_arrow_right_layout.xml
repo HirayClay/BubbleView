@@ -2,40 +2,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
     app:arrow_direction="right"
     app:arrow_height="20dp"
-    app:arrow_start_position="10dp"
-    app:arrow_width="20dp"
+    app:arrow_start_position="20dp"
     app:arrow_angle_position="10dp"
+    app:arrow_width="20dp"
+    app:bubble_color="@color/colorBright"
     app:extra_corner_padding="true"
-    app:extra_corner_ratio="1"
-    app:bubble_color="#FF4081"
-    app:left_bottom_corner="9dp"
-    app:left_top_corner="9dp"
-    app:right_bottom_corner="9dp"
-    app:right_top_corner="9dp">
+    app:extra_corner_ratio="0.5"
+    app:left_bottom_corner="10dp"
+    app:left_top_corner="10dp"
+    app:right_bottom_corner="10dp"
+    app:right_top_corner="10dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:gravity="center"
+            android:text="Content Scrim  Content Scrim" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:gravity="center"
+            android:text="Content Scrim  Content Scrim" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:gravity="center"
+            android:text="Content Scrim  Content Scrim"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Content Scrim  Content Scrim"
+            android:textColor="@android:color/white" />
     </LinearLayout>
+
 </com.example.hirayclay.bubbleview.Bubble>

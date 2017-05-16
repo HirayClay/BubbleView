@@ -6,11 +6,11 @@
     app:arrow_height="20dp"
     app:arrow_start_position="15dp"
     app:arrow_width="20dp"
+    app:bubble_color="@color/colorBrown"
     app:extra_corner_padding="true"
     app:extra_corner_ratio="1"
     app:left_bottom_corner="9dp"
     app:left_top_corner="9dp"
-    app:bubble_color="#b73e52"
     app:right_bottom_corner="9dp"
     app:right_top_corner="9dp">
 

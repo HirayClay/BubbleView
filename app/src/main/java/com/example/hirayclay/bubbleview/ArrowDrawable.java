@@ -20,7 +20,6 @@ import android.support.annotation.Nullable;
 public class ArrowDrawable extends Drawable {
 
     private ArrowAlign mArrowAlign;
-    private final boolean mExtraCornerPadding;
     private float mArrowPosition;//arrow的起始位置
     private float mArrowAnglePostion;//arrow 尖距离arrow其实位置的距离
     private float mArrowWidth;//arrow宽度
@@ -38,16 +37,15 @@ public class ArrowDrawable extends Drawable {
     Path mPath;
 
 
-    public ArrowDrawable(ArrowAlign mArrowAlign, int color,boolean mExtraCornerPadding, float mArrowWidth, float mArrowHeight, float mArrowPosition,
+    public ArrowDrawable(ArrowAlign mArrowAlign, int color, float mArrowWidth, float mArrowHeight, float mArrowPosition,
                          float mArrowAnglePosition,
                          float ltCorner, float rtCorner, float lbCorner, float rbCorner,
                          int left, int top, int right, int bottom) {
         this.mArrowAlign = mArrowAlign;
         this.mColor = color;
-        this.mExtraCornerPadding = mExtraCornerPadding;
-        this.mArrowPosition = mArrowPosition;
-        this.mArrowHeight = mArrowHeight;
         this.mArrowWidth = mArrowWidth;
+        this.mArrowHeight = mArrowHeight;
+        this.mArrowPosition = mArrowPosition;
         this.mArrowAnglePostion = mArrowAnglePosition;
         this.mLtCorner = ltCorner;
         this.mRtCorner = rtCorner;
@@ -67,11 +65,11 @@ public class ArrowDrawable extends Drawable {
 
         //left to right matrix
         Matrix l2rMatrix = new Matrix();
-        l2rMatrix.setValues(new float[]{-1, 0, rect.width(), 0, 1, 0, 0, 0,0});
+        l2rMatrix.setValues(new float[]{-1, 0, rect.width(), 0, 1, 0, 0, 0, 1});
 
         //top to bottom matrix
         Matrix t2bMatrix = new Matrix();
-        t2bMatrix.setValues(new float[]{1, 0, 0, 0, -1, rect.height(), 0, 0, 0});
+        t2bMatrix.setValues(new float[]{1, 0, 0, 0, -1, rect.height(), 0, 0, 1});
 
         switch (mArrowAlign) {
             default:

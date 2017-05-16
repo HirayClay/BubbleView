@@ -8,6 +8,7 @@
     app:arrow_start_position="10dp"
     app:arrow_width="20dp"
     app:extra_corner_padding="true"
+    app:bubble_color="@android:color/white"
     app:extra_corner_ratio="1"
     app:left_bottom_corner="9dp"
     app:left_top_corner="9dp"
@@ -17,24 +18,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:divider="@drawable/layout_vertical_divider"
+        android:showDividers="middle">
 
         <TextView
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:text="Home" />
 
         <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:text="All..." />
 
         <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
+            android:text="History" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Favorite" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Person" />
     </LinearLayout>
 </com.example.hirayclay.bubbleview.Bubble>
