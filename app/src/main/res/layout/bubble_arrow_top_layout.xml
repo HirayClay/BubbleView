@@ -9,7 +9,7 @@
     app:extra_corner_padding="true"
     app:extra_corner_ratio="1"
     app:left_bottom_corner="9dp"
-    app:bubble_color="#C68B1E"
+    app:bubble_color="#c68b1e"
     app:left_top_corner="0dp"
     app:right_bottom_corner="9dp"
     app:right_top_corner="9dp">
