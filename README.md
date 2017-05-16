@@ -3,4 +3,4 @@
 有时是需要根据气泡的尖角来控制气泡位置，所以本空间提供了两种显示位置的方式：1）针对控件位置显示气泡  2）针对某点显示气泡
 
 ## 效果
-![](https://github.com/HirayClay/Bubble/raw/master/app/static/art1.png "poor picture quality")
+![](https://github.com/HirayClay/BubbleView/raw/master/app/static/art1.png "poor picture quality")
