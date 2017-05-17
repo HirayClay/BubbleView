@@ -1,21 +1,18 @@
 package com.example.hirayclay.bubbleview;
 
-import android.app.usage.UsageEvents;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewParent;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import android.widget.PopupWindow;
 
 /**
  * Created by CJJ on 2017/5/15.
+ *
  */
 
 public class PopHelper implements View.OnClickListener {

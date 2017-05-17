@@ -71,20 +71,39 @@ public class ArrowDrawable extends Drawable {
         Matrix t2bMatrix = new Matrix();
         t2bMatrix.setValues(new float[]{1, 0, 0, 0, -1, rect.height(), 0, 0, 1});
 
+        float corner;
         switch (mArrowAlign) {
             default:
             case LEFT:
                 mPath = generateLeftAlignPath();
                 break;
             case RIGHT:
+                //correct the side effect of Matrix transform
+                corner = mLtCorner;
+                mLtCorner = mRtCorner;
+                mRtCorner = corner;
+
+                corner = mLbCorner;
+                mLbCorner = mRbCorner;
+                mRbCorner = corner;
                 mPath = generateLeftAlignPath();
+
                 mPath.transform(l2rMatrix);
                 break;
             case TOP:
                 mPath = generateTopAlignPath();
                 break;
             case BOTTOM:
+                //correct the side effect of Matrix transform
+                corner = mLtCorner;
+                mLtCorner = mLbCorner;
+                mLbCorner = corner;
+
+                corner = mRtCorner;
+                mRtCorner = mRbCorner;
+                mRbCorner = corner;
                 mPath = generateTopAlignPath();
+
                 mPath.transform(t2bMatrix);
                 break;
         }
