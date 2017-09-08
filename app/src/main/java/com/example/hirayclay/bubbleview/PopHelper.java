@@ -1,5 +1,6 @@
 package com.example.hirayclay.bubbleview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.support.annotation.IdRes;
@@ -38,7 +39,7 @@ public class PopHelper implements View.OnClickListener {
      * @param y
      */
     public void showAtPoint(Bubble bubble, int x, int y) {
-        wm = ((AppCompatActivity) context).getWindowManager();
+        wm = ((Activity) context).getWindowManager();
 
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {

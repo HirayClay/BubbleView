@@ -59,16 +59,17 @@ public class Bubble extends FrameLayout {
         mArrowAlign = ArrowAlign.parseInt(array.getInteger(R.styleable.Bubble_arrow_direction, 0));
         mCornerPadding = array.getBoolean(R.styleable.Bubble_extra_corner_padding, false);
         mExtraCornerRatio = array.getFloat(R.styleable.Bubble_extra_corner_ratio, 0f);
-        Log.i(TAG,
-                "Bubble: mIsFloating:" + mIsFloating + "\n"
-                        + "mCornerPadding" + mCornerPadding + "\n"
-                        + "mArrowAlign:" + mArrowAlign + "\n"
-                        + "LtCorner:" + mLtCorner + "\n"
-                        + "mRtCorner:" + mRtCorner + "\n"
-                        + "mRbCorner" + mRbCorner + "\n"
-                        + "mArrowHeight" + mArrowHeight + "\n"
-                        + "mArrowPosition：" + mArrowPosition + "\n"
-                        + "mArrowWidth:" + mArrowWidth);
+        if (BuildConfig.DEBUG)
+            Log.i(TAG,
+                    "Bubble: mIsFloating:" + mIsFloating + "\n"
+                            + "mCornerPadding" + mCornerPadding + "\n"
+                            + "mArrowAlign:" + mArrowAlign + "\n"
+                            + "LtCorner:" + mLtCorner + "\n"
+                            + "mRtCorner:" + mRtCorner + "\n"
+                            + "mRbCorner" + mRbCorner + "\n"
+                            + "mArrowHeight" + mArrowHeight + "\n"
+                            + "mArrowPosition：" + mArrowPosition + "\n"
+                            + "mArrowWidth:" + mArrowWidth);
         setPadding();
     }
 
