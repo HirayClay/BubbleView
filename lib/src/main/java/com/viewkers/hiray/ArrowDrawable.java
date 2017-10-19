@@ -1,7 +1,6 @@
-package com.example.hirayclay.bubbleview;
+package com.viewkers.hiray;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Matrix;
 import android.graphics.Paint;

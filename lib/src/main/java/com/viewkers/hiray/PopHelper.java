@@ -1,10 +1,9 @@
-package com.example.hirayclay.bubbleview;
+package com.viewkers.hiray;
 
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -34,9 +33,9 @@ public class PopHelper implements View.OnClickListener {
 
     /**
      * 显示在某一点
-     *
-     * @param x
-     * @param y
+     *@param bubble ...
+     * @param x ..
+     * @param y ..
      */
     public void showAtPoint(Bubble bubble, int x, int y) {
         wm = ((Activity) context).getWindowManager();

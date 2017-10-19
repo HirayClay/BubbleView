@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Bubble">
+        <attr name="arrow_direction" format="enum">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+
+        <attr name="arrow_height" format="dimension" />
+        <attr name="arrow_start_position" format="dimension" />
+        <attr name="arrow_angle_position" format="dimension" />
+        <attr name="arrow_width" format="dimension" />
+        <attr name="bubble_color" format="color" />
+
+        <attr name="extra_corner_padding" format="boolean" />
+        <attr name="extra_corner_ratio" format="float" />
+
+        <attr name="left_top_corner" format="dimension" />
+        <attr name="right_top_corner" format="dimension" />
+        <attr name="left_bottom_corner" format="dimension" />
+        <attr name="right_bottom_corner" format="dimension" />
+        <attr name="is_floating" format="boolean" />
+
+    </declare-styleable>
+</resources>

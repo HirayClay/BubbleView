@@ -1,4 +1,4 @@
-package com.example.hirayclay.bubbleview;
+package com.viewkers.hiray;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.FrameLayout;
+
+
 
 /**
  * Created by CJJ on 2017/5/12 mm

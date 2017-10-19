@@ -1,4 +1,4 @@
-package com.example.hirayclay.bubbleview;
+package com.viewkers.hiray;
 
 import android.support.annotation.IntRange;
 
