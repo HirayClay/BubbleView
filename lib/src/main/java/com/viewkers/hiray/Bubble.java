@@ -25,7 +25,7 @@ public class Bubble extends FrameLayout {
     private float mExtraCornerRatio;
     private ArrowAlign mArrowAlign;
     private float mArrowPosition;//arrow的起始位置
-    private float mArrowAnglePosition;//arrow 尖距离arrow其实位置的距离
+    private float mArrowAnglePosition;//arrow 尖距离arrow起始位置的距离
     private float mArrowWidth;//arrow宽度
     private float mArrowHeight;//arrow 高度
 
