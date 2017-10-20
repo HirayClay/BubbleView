@@ -8,8 +8,14 @@
 <img width="280" height=“512” src="https://github.com/HirayClay/BubbleView/raw/master/app/static/art3.png"></img>
 
 ## Usage
+
+```
+compile 'com.viewkers.hiray:lib:1.0.0'
+```
+
+
 ```xml
-<com.example.hirayclay.bubbleview.Bubble
+<com.viewkers.hiray.Bubble
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -45,7 +51,7 @@
             android:includeFontPadding="false"
             android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
     </LinearLayout>
-</com.example.hirayclay.bubbleview.Bubble>
+</com.viewkers.hiray.Bubble>
 ```
 ![](https://github.com/HirayClay/BubbleView/raw/master/app/static/small_illustration.png "poor picture quality")<br>
 
