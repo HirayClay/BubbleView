@@ -96,4 +96,8 @@ public class PopHelper implements View.OnClickListener {
                 break;
         }
     }
+
+    public void dimiss(){
+        wm.removeView(parent);
+    }
 }
