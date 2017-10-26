@@ -10,7 +10,7 @@
 ## Usage
 
 ```
-compile 'com.viewkers.hiray:lib:1.0.0'
+compile 'com.viewkers.hiray:lib:1.3.0'
 ```
 
 
