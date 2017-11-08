@@ -12,6 +12,7 @@ import com.viewkers.hiray.PopHelper;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
+    private PopHelper popHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +36,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showAtView(View view) {
-        PopHelper popHelper = new PopHelper(this);
+        popHelper = new PopHelper(this);
         LayoutInflater inflater = LayoutInflater.from(this);
 
         Bubble bubble = (Bubble) inflater.inflate(R.layout.bubble_layout, null);
         popHelper.showAtView(bubble, view);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

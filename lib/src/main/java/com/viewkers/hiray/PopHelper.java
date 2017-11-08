@@ -6,13 +6,13 @@ import android.graphics.PixelFormat;
 import android.support.annotation.IdRes;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 /**
  * Created by CJJ on 2017/5/15.
- *
  */
 
 public class PopHelper implements View.OnClickListener {
@@ -33,9 +33,10 @@ public class PopHelper implements View.OnClickListener {
 
     /**
      * 显示在某一点
-     *@param bubble ...
-     * @param x ..
-     * @param y ..
+     *
+     * @param bubble ...
+     * @param x      ..
+     * @param y      ..
      */
     public void showAtPoint(Bubble bubble, int x, int y) {
         wm = ((Activity) context).getWindowManager();
@@ -66,12 +67,23 @@ public class PopHelper implements View.OnClickListener {
         parent.setOnClickListener(this);
         bubble.setOnClickListener(this);
         wm.addView(parent, layoutParams);
+        parent.setFocusableInTouchMode(true);
+        parent.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    dismiss();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void showAtView(Bubble bubble, View view) {
         int[] xy = new int[2];
         view.getLocationInWindow(xy);
-        int x=xy[0], y;
+        int x = xy[0], y;
         switch (bubble.getArrowAlign()) {
             case TOP:
 
@@ -80,7 +92,7 @@ public class PopHelper implements View.OnClickListener {
                 break;
         }
         y = xy[1] + view.getHeight();
-        showAtPoint(bubble,x,y);
+        showAtPoint(bubble, x, y);
 
     }
 
@@ -97,7 +109,8 @@ public class PopHelper implements View.OnClickListener {
         }
     }
 
-    public void dimiss(){
-        wm.removeView(parent);
+    public void dismiss() {
+        if (parent != null && parent.getParent() != null)
+            wm.removeView(parent);
     }
 }
