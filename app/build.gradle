@@ -14,7 +14,9 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile(getDefaultProguardFile('proguard-android.txt'))
+            proguardFile('proguard-rules.pro')
         }
     }
 }
@@ -24,10 +26,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.viewkers.hiray:lib:1.5.0'
-//    compile project(':lib')
 }
 
