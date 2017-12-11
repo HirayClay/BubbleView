@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="Bubble">
+    <declare-styleable name="BubbleView">
         <attr name="arrow_direction" format="enum">
             <enum name="left" value="0" />
             <enum name="top" value="1" />

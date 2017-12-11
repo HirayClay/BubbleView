@@ -38,7 +38,7 @@ public class PopHelper implements View.OnClickListener {
      * @param x      ..
      * @param y      ..
      */
-    public void showAtPoint(Bubble bubble, int x, int y) {
+    public void showAtPoint(BubbleView bubble, int x, int y) {
         wm = ((Activity) context).getWindowManager();
 
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
@@ -80,7 +80,7 @@ public class PopHelper implements View.OnClickListener {
         });
     }
 
-    public void showAtView(Bubble bubble, View view) {
+    public void showAtView(BubbleView bubble, View view) {
         int[] xy = new int[2];
         view.getLocationInWindow(xy);
         int x = xy[0], y;

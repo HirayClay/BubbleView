@@ -13,12 +13,12 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
- * Created by CJJ on 2017/5/12.
+ * Created by hiray on 2017/5/12.
  */
 
 public class ArrowDrawable extends Drawable {
 
-    private ArrowAlign mArrowAlign;
+    private Alignment mArrowAlign;
     private float mArrowPosition;//arrow的起始位置
     private float mArrowAnglePostion;//arrow 尖距离arrow其实位置的距离
     private float mArrowWidth;//arrow宽度
@@ -36,7 +36,7 @@ public class ArrowDrawable extends Drawable {
     Path mPath;
 
 
-    public ArrowDrawable(ArrowAlign mArrowAlign, int color, float mArrowWidth, float mArrowHeight, float mArrowPosition,
+    public ArrowDrawable(Alignment mArrowAlign, int color, float mArrowWidth, float mArrowHeight, float mArrowPosition,
                          float mArrowAnglePosition,
                          float ltCorner, float rtCorner, float lbCorner, float rbCorner,
                          int left, int top, int right, int bottom) {

@@ -17,13 +17,13 @@ import android.widget.FrameLayout;
  * 空间
  */
 
-public class Bubble extends FrameLayout {
+public class BubbleView extends FrameLayout {
 
     private static final String TAG = "Bubble";
     private boolean mIsFloating;//是否作为悬浮窗口
     private boolean mCornerPadding;//是否使用圆角corner值作为padding，使得内容距离圆角有一定的间隔
     private float mExtraCornerRatio;
-    private ArrowAlign mArrowAlign;
+    private Alignment mArrowAlign;
     private float mArrowPosition;//arrow的起始位置
     private float mArrowAnglePosition;//arrow 尖距离arrow起始位置的距离
     private float mArrowWidth;//arrow宽度
@@ -40,27 +40,27 @@ public class Bubble extends FrameLayout {
     //the drawable which draw self into a arrow also as "background"
     ArrowDrawable mArrowDrawable;
 
-    public Bubble(Context context) {
+    public BubbleView(Context context) {
         super(context);
     }
 
-    public Bubble(Context context, @Nullable AttributeSet attrs) {
+    public BubbleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.Bubble);
-        mIsFloating = array.getBoolean(R.styleable.Bubble_is_floating, false);
-        mColor = array.getColor(R.styleable.Bubble_bubble_color, Color.GREEN);
-        mLtCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_top_corner, 0);
-        mRtCorner = array.getDimensionPixelSize(R.styleable.Bubble_right_top_corner, 0);
-        mLbCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_bottom_corner, 0);
-        mRbCorner = array.getDimensionPixelSize(R.styleable.Bubble_right_bottom_corner, 0);
-        mArrowHeight = array.getDimensionPixelSize(R.styleable.Bubble_arrow_height, 0);
-        mArrowPosition = array.getDimensionPixelSize(R.styleable.Bubble_arrow_start_position, 0);
-        mArrowAnglePosition = array.getDimensionPixelSize(R.styleable.Bubble_arrow_angle_position, 0);
-        mArrowWidth = array.getDimensionPixelSize(R.styleable.Bubble_arrow_width, 0);
-        mArrowAlign = ArrowAlign.parseInt(array.getInteger(R.styleable.Bubble_arrow_direction, 0));
-        mCornerPadding = array.getBoolean(R.styleable.Bubble_extra_corner_padding, false);
-        mExtraCornerRatio = array.getFloat(R.styleable.Bubble_extra_corner_ratio, 0f);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.BubbleView);
+        mIsFloating = array.getBoolean(R.styleable.BubbleView_is_floating, false);
+        mColor = array.getColor(R.styleable.BubbleView_bubble_color, Color.GREEN);
+        mLtCorner = array.getDimensionPixelSize(R.styleable.BubbleView_left_top_corner, 0);
+        mRtCorner = array.getDimensionPixelSize(R.styleable.BubbleView_right_top_corner, 0);
+        mLbCorner = array.getDimensionPixelSize(R.styleable.BubbleView_left_bottom_corner, 0);
+        mRbCorner = array.getDimensionPixelSize(R.styleable.BubbleView_right_bottom_corner, 0);
+        mArrowHeight = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_height, 0);
+        mArrowPosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_start_position, 0);
+        mArrowAnglePosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_angle_position, 0);
+        mArrowWidth = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_width, 0);
+        mArrowAlign = Alignment.parseInt(array.getInteger(R.styleable.BubbleView_arrow_direction, 0));
+        mCornerPadding = array.getBoolean(R.styleable.BubbleView_extra_corner_padding, false);
+        mExtraCornerRatio = array.getFloat(R.styleable.BubbleView_extra_corner_ratio, 0f);
         if (BuildConfig.DEBUG)
             Log.i(TAG,
                     "Bubble: mIsFloating:" + mIsFloating + "\n"
@@ -102,7 +102,7 @@ public class Bubble extends FrameLayout {
         setPadding(left + extraLeft, top + extraTop, right + extraRight, bottom + extraBottom);
     }
 
-    public Bubble(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public BubbleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -130,7 +130,7 @@ public class Bubble extends FrameLayout {
         requestLayout();
     }
 
-    public void setArrowAlign(ArrowAlign mArrowAlign) {
+    public void setArrowAlign(Alignment mArrowAlign) {
         this.mArrowAlign = mArrowAlign;
         requestLayout();
 
@@ -156,7 +156,7 @@ public class Bubble extends FrameLayout {
         requestLayout();
     }
 
-    public ArrowAlign getArrowAlign() {
+    public Alignment getArrowAlign() {
         return mArrowAlign;
     }
 
