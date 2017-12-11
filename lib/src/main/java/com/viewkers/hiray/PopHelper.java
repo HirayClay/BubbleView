@@ -55,6 +55,8 @@ public class PopHelper implements View.OnClickListener {
         layoutParams.x = -statusBarHeight;
         layoutParams.y = 0;
 //        parent.setBackgroundColor(Color.argb(100, 256, 256, 256));
+        //针对左右方向时边界裁剪导致的view过长
+        parent.setClipChildren(false);
         parent.setId(parentId);
         bubble.setId(bubbleId);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);

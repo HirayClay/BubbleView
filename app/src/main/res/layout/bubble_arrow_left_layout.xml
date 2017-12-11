@@ -1,4 +1,4 @@
-<com.viewkers.hiray.Bubble xmlns:android="http://schemas.android.com/apk/res/android"
+<com.viewkers.hiray.BubbleView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -37,4 +37,4 @@
             android:includeFontPadding="false"
             android:text="IPSUM TEXTIPSUM TEXTIPSUM TEXT" />
     </LinearLayout>
-</com.viewkers.hiray.Bubble>
+</com.viewkers.hiray.BubbleView>

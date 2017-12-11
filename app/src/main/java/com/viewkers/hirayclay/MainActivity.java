@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.bubbleview.R;
-import com.viewkers.hiray.Bubble;
+import com.viewkers.hiray.BubbleView;
 import com.viewkers.hiray.PopHelper;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         PopHelper popHelper = new PopHelper(this);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        Bubble bubble = (Bubble) inflater.inflate(R.layout.bubble_layout, null);
+        BubbleView bubble = (BubbleView) inflater.inflate(R.layout.bubble_layout, null);
         int[] xy = new int[2];
         view.getLocationInWindow(xy);
         popHelper.showAtPoint(bubble, xy[0], xy[1]);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         popHelper = new PopHelper(this);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        Bubble bubble = (Bubble) inflater.inflate(R.layout.bubble_layout, null);
+        BubbleView bubble = (BubbleView) inflater.inflate(R.layout.bubble_layout, null);
         popHelper.showAtView(bubble, view);
     }
 
