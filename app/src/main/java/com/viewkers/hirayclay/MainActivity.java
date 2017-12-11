@@ -30,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
         popHelper.showAtPoint(bubble, xy[0], xy[1]);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
 
     public void showAtView(View view) {
         popHelper = new PopHelper(this);
@@ -46,5 +42,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    /*点击边缘point*/
+    public void onClickEdgePoint(View view) {
+       showAtView(view);
     }
 }

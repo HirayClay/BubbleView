@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BubbleView</string>
+    <string name="example_text">IPSUM TEXTIPSUM TEXTIPSUM TEXT</string>
+    <string name="description"><![CDATA[showAtPoint:----->]]></string>
 </resources>

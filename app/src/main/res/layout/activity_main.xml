@@ -6,6 +6,7 @@
     android:gravity="left"
     android:orientation="vertical"
     android:paddingLeft="?attr/actionBarSize"
+    android:layoutDirection="ltr"
     tools:context="com.viewkers.hirayclay.MainActivity">
 
 
@@ -19,7 +20,7 @@
             android:layout_height="wrap_content"
             android:background="#f25555"
             android:onClick="onClick"
-            android:text="showAtPoint:----->"
+            android:text="@string/description"
             android:textColor="@android:color/white" />
 
         <View
@@ -77,5 +78,14 @@
 
     <include layout="@layout/bubble_arrow_bottom_layout" />
 
+
+    <View
+        android:id="@+id/edge_point"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorAccent"
+        android:layout_width="13dp"
+        android:onClick="onClickEdgePoint"
+        android:layout_height="13dp"/>
 
 </LinearLayout>
