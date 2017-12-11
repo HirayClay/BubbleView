@@ -61,6 +61,7 @@ public class Bubble extends FrameLayout {
         mArrowAlign = ArrowAlign.parseInt(array.getInteger(R.styleable.Bubble_arrow_direction, 0));
         mCornerPadding = array.getBoolean(R.styleable.Bubble_extra_corner_padding, false);
         mExtraCornerRatio = array.getFloat(R.styleable.Bubble_extra_corner_ratio, 0f);
+        array.recycle();
         if (BuildConfig.DEBUG)
             Log.i(TAG,
                     "Bubble: mIsFloating:" + mIsFloating + "\n"
