@@ -17,13 +17,13 @@ import android.widget.FrameLayout;
  * 空间
  */
 
-public class Bubble extends FrameLayout {
+public class BubbleView extends FrameLayout {
 
     private static final String TAG = "Bubble";
     private boolean mIsFloating;//是否作为悬浮窗口
     private boolean mCornerPadding;//是否使用圆角corner值作为padding，使得内容距离圆角有一定的间隔
     private float mExtraCornerRatio;
-    private ArrowAlign mArrowAlign;
+    private Alignment mArrowAlign;
     private float mArrowPosition;//arrow的起始位置
     private float mArrowAnglePosition;//arrow 尖距离arrow起始位置的距离
     private float mArrowWidth;//arrow宽度
@@ -40,12 +40,13 @@ public class Bubble extends FrameLayout {
     //the drawable which draw self into a arrow also as "background"
     ArrowDrawable mArrowDrawable;
 
-    public Bubble(Context context) {
+    public BubbleView(Context context) {
         super(context);
     }
 
-    public Bubble(Context context, @Nullable AttributeSet attrs) {
+    public BubbleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+
 
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.Bubble);
         mIsFloating = array.getBoolean(R.styleable.Bubble_is_floating, false);
@@ -103,7 +104,7 @@ public class Bubble extends FrameLayout {
         setPadding(left + extraLeft, top + extraTop, right + extraRight, bottom + extraBottom);
     }
 
-    public Bubble(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public BubbleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -131,7 +132,7 @@ public class Bubble extends FrameLayout {
         requestLayout();
     }
 
-    public void setArrowAlign(ArrowAlign mArrowAlign) {
+    public void setArrowAlign(Alignment mArrowAlign) {
         this.mArrowAlign = mArrowAlign;
         requestLayout();
 
@@ -157,7 +158,7 @@ public class Bubble extends FrameLayout {
         requestLayout();
     }
 
-    public ArrowAlign getArrowAlign() {
+    public Alignment getArrowAlign() {
         return mArrowAlign;
     }
 

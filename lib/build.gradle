@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
-apply from:'../mvn.gradle'
+//apply from:'../mvn.gradle'
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 26
@@ -25,6 +25,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    provided 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    provided 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
 }

@@ -6,15 +6,15 @@ import android.support.annotation.IntRange;
  * Created by CJJ on 2017/5/12.mm
  */
 
-public enum ArrowAlign {
+public enum Alignment {
     LEFT,
     TOP,
     RIGHT,
     BOTTOM;
 
-    public static ArrowAlign parseInt(@IntRange(from = 0,to = 3) int valueIndex) {
+    public static Alignment parseInt(@IntRange(from = 0,to = 3) int valueIndex) {
         if (valueIndex >= 0 && valueIndex <= 3)
-            return ArrowAlign.values()[valueIndex];
+            return Alignment.values()[valueIndex];
         else return BOTTOM;
     }
 }

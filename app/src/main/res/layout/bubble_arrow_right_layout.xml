@@ -1,9 +1,9 @@
-<com.viewkers.hiray.Bubble xmlns:android="http://schemas.android.com/apk/res/android"
+<com.viewkers.hiray.BubbleView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="10dp"
     app:arrow_direction="right"
     app:arrow_height="20dp"
     app:arrow_start_position="20dp"
@@ -50,4 +50,4 @@
             android:textColor="@android:color/white" />
     </LinearLayout>
 
-</com.viewkers.hiray.Bubble>
+</com.viewkers.hiray.BubbleView>
