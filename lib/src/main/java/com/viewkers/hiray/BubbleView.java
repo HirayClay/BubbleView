@@ -10,7 +10,6 @@ import android.util.Log;
 import android.widget.FrameLayout;
 
 
-
 /**
  * Created by CJJ on 2017/5/12 mm
  * 继承FrameLayout是比较好的选择，只用关心直接子节点的大小即可，设置额外的Padding为ArrowDrawable留出绘制
@@ -48,20 +47,20 @@ public class BubbleView extends FrameLayout {
         super(context, attrs);
 
 
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.Bubble);
-        mIsFloating = array.getBoolean(R.styleable.Bubble_is_floating, false);
-        mColor = array.getColor(R.styleable.Bubble_bubble_color, Color.GREEN);
-        mLtCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_top_corner, 0);
-        mRtCorner = array.getDimensionPixelSize(R.styleable.Bubble_right_top_corner, 0);
-        mLbCorner = array.getDimensionPixelSize(R.styleable.Bubble_left_bottom_corner, 0);
-        mRbCorner = array.getDimensionPixelSize(R.styleable.Bubble_right_bottom_corner, 0);
-        mArrowHeight = array.getDimensionPixelSize(R.styleable.Bubble_arrow_height, 0);
-        mArrowPosition = array.getDimensionPixelSize(R.styleable.Bubble_arrow_start_position, 0);
-        mArrowAnglePosition = array.getDimensionPixelSize(R.styleable.Bubble_arrow_angle_position, 0);
-        mArrowWidth = array.getDimensionPixelSize(R.styleable.Bubble_arrow_width, 0);
-        mArrowAlign = ArrowAlign.parseInt(array.getInteger(R.styleable.Bubble_arrow_direction, 0));
-        mCornerPadding = array.getBoolean(R.styleable.Bubble_extra_corner_padding, false);
-        mExtraCornerRatio = array.getFloat(R.styleable.Bubble_extra_corner_ratio, 0f);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.BubbleView);
+        mIsFloating = array.getBoolean(R.styleable.BubbleView_is_floating, false);
+        mColor = array.getColor(R.styleable.BubbleView_bubble_color, Color.GREEN);
+        mLtCorner = array.getDimensionPixelSize(R.styleable.BubbleView_left_top_corner, 0);
+        mRtCorner = array.getDimensionPixelSize(R.styleable.BubbleView_right_top_corner, 0);
+        mLbCorner = array.getDimensionPixelSize(R.styleable.BubbleView_left_bottom_corner, 0);
+        mRbCorner = array.getDimensionPixelSize(R.styleable.BubbleView_right_bottom_corner, 0);
+        mArrowHeight = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_height, 0);
+        mArrowPosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_start_position, 0);
+        mArrowAnglePosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_angle_position, 0);
+        mArrowWidth = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_width, 0);
+        mArrowAlign = Alignment.parseInt(array.getInteger(R.styleable.BubbleView_arrow_direction, 0));
+        mCornerPadding = array.getBoolean(R.styleable.BubbleView_extra_corner_padding, false);
+        mExtraCornerRatio = array.getFloat(R.styleable.BubbleView_extra_corner_ratio, 0f);
         array.recycle();
         if (BuildConfig.DEBUG)
             Log.i(TAG,
