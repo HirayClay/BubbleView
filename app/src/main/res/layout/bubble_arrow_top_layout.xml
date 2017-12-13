@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     app:arrow_direction="right"
     app:arrow_height="20dp"
     app:arrow_start_position="10dp"
@@ -12,7 +13,8 @@
     app:bubble_color="#c68b1e"
     app:left_top_corner="9dp"
     app:right_bottom_corner="9dp"
-    app:right_top_corner="9dp">
+    app:right_top_corner="9dp"
+    tools:showIn="@layout/activity_main">
 
     <LinearLayout
         android:layout_width="match_parent"

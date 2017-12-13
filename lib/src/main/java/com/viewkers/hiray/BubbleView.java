@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 
 
 /**
- * Created by CJJ on 2017/5/12 mm
+ * Created by hiray on 2017/5/12 mm
  * 继承FrameLayout是比较好的选择，只用关心直接子节点的大小即可，设置额外的Padding为ArrowDrawable留出绘制
  * 空间
  */
@@ -22,7 +22,7 @@ public class BubbleView extends FrameLayout {
     private boolean mIsFloating;//是否作为悬浮窗口
     private boolean mCornerPadding;//是否使用圆角corner值作为padding，使得内容距离圆角有一定的间隔
     private float mExtraCornerRatio;
-    private Alignment mArrowAlign;
+    private Alignment mAlignment;
     private float mArrowPosition;//arrow的起始位置
     private float mArrowAnglePosition;//arrow 尖距离arrow起始位置的距离
     private float mArrowWidth;//arrow宽度
@@ -58,7 +58,7 @@ public class BubbleView extends FrameLayout {
         mArrowPosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_start_position, 0);
         mArrowAnglePosition = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_angle_position, 0);
         mArrowWidth = array.getDimensionPixelSize(R.styleable.BubbleView_arrow_width, 0);
-        mArrowAlign = Alignment.parseInt(array.getInteger(R.styleable.BubbleView_arrow_direction, 0));
+        mAlignment = Alignment.parseInt(array.getInteger(R.styleable.BubbleView_arrow_direction, 0));
         mCornerPadding = array.getBoolean(R.styleable.BubbleView_extra_corner_padding, false);
         mExtraCornerRatio = array.getFloat(R.styleable.BubbleView_extra_corner_ratio, 0f);
         array.recycle();
@@ -66,7 +66,7 @@ public class BubbleView extends FrameLayout {
             Log.i(TAG,
                     "Bubble: mIsFloating:" + mIsFloating + "\n"
                             + "mCornerPadding" + mCornerPadding + "\n"
-                            + "mArrowAlign:" + mArrowAlign + "\n"
+                            + "mAlignment:" + mAlignment + "\n"
                             + "LtCorner:" + mLtCorner + "\n"
                             + "mRtCorner:" + mRtCorner + "\n"
                             + "mRbCorner" + mRbCorner + "\n"
@@ -86,7 +86,7 @@ public class BubbleView extends FrameLayout {
         int extraTop = mCornerPadding ? (int) (mExtraCornerRatio * Math.max(mLtCorner, mRtCorner)) : 0;
         int extraRight = mCornerPadding ? (int) (mExtraCornerRatio * Math.max(mRtCorner, mRbCorner)) : 0;
         int extraBottom = mCornerPadding ? (int) (mExtraCornerRatio * Math.max(mLbCorner, mRbCorner)) : 0;
-        switch (mArrowAlign) {
+        switch (mAlignment) {
             case LEFT:
                 left += mArrowHeight;
                 break;
@@ -112,7 +112,7 @@ public class BubbleView extends FrameLayout {
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         if (mArrowDrawable == null || changed)
-            mArrowDrawable = new ArrowDrawable(mArrowAlign, mColor, mArrowWidth, mArrowHeight,
+            mArrowDrawable = new ArrowDrawable(mAlignment, mColor, mArrowWidth, mArrowHeight,
                     mArrowPosition, mArrowAnglePosition, mLtCorner, mRtCorner, mLbCorner, mRbCorner,
                     0, 0, getWidth(), getHeight());
     }
@@ -132,7 +132,7 @@ public class BubbleView extends FrameLayout {
     }
 
     public void setArrowAlign(Alignment mArrowAlign) {
-        this.mArrowAlign = mArrowAlign;
+        this.mAlignment = mArrowAlign;
         requestLayout();
 
     }
@@ -158,7 +158,7 @@ public class BubbleView extends FrameLayout {
     }
 
     public Alignment getArrowAlign() {
-        return mArrowAlign;
+        return mAlignment;
     }
 
     public float getArrowHeight() {

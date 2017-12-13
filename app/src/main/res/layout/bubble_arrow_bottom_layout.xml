@@ -12,6 +12,7 @@
     app:left_bottom_corner="9dp"
     app:left_top_corner="9dp"
     app:right_bottom_corner="9dp"
+    android:background="@color/colorAccent"
     app:right_top_corner="9dp">
 
     <LinearLayout

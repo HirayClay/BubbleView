@@ -14,6 +14,8 @@
     app:left_top_corner="9dp"
     app:right_bottom_corner="9dp"
     app:right_top_corner="9dp"
+    android:elevation="40dp"
+    android:translationZ="40dp"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout

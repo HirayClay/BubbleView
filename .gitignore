@@ -7,5 +7,4 @@
 /build
 /captures
 .externalNativeBuild
-/mvn.gradle
 /.gitignore

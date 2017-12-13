@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
@@ -54,9 +56,6 @@ public class PopHelper implements View.OnClickListener {
         layoutParams.gravity = Gravity.START | Gravity.TOP;
         layoutParams.x = -statusBarHeight;
         layoutParams.y = 0;
-//        parent.setBackgroundColor(Color.argb(100, 256, 256, 256));
-        //针对左右方向时边界裁剪导致的view过长
-        parent.setClipChildren(false);
         parent.setId(parentId);
         bubble.setId(bubbleId);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
@@ -102,11 +101,9 @@ public class PopHelper implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case parentId:
-                Log.i(TAG, "onClick: Parent");
                 wm.removeView(parent);
                 break;
             case bubbleId:
-                Log.i(TAG, "onClick: Parent");
                 break;
         }
     }
